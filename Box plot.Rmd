@@ -1,0 +1,17 @@
+---
+title: "Box Plot"
+author: "Srijana Bhandari"
+date: "2024-05-10"
+output: html_document
+---
+
+```{r}
+data <- c(2,3,1,8,7,6,5,3,10,9)
+```
+```{r}
+category_labels <- c("Category A", "category B", "Category C")
+category_values <- c(40,30,30)
+pie(category_values, labels = category_labels,
+    )
+```
+
