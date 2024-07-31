@@ -1,0 +1,87 @@
+---
+title: "Distribution"
+author: "Srijana Bhandari"
+date: "2024-05-16"
+output: html_document
+---
+
+```{r}
+#Exercise 1.01
+#i)
+R= 0:36
+#ii)
+#a)
+a = length(R[R<20])/length(R)
+set.seed(1)
+R1 = sample(x=R,size = 1000, replace = TRUE)
+mean(R1)
+#b)
+b = length(R[R >= 10])/length(R)
+#c)
+c = length(R[3<R<9])/length(R)
+
+
+#iv
+table(R1)
+#v
+hist(R1)
+#vi
+
+
+#vii
+Mean = mean(R1)
+Md = median(R1)
+Stand = sd(R1)
+sk 
+
+```
+```{r}
+#i)
+dbinom(x=6,size=10,prob = 0.70)
+
+at_least_9 = dbinom(x = 10, size = 10, prob = 0.70) + dbinom(x = 9,size = 10,prob = 0.70)
+
+fewer_than_5 = dbinom(x = 0, size = 10, prob = 0.70) + dbinom(x = 1, size = 10, prob = 0.70) + dbinom(x = 2, size = 10, prob = 0.70) + dbinom(x = 3, size = 10, prob = 0.70) + dbinom(x = 4, size = 10, prob = 0.70) 
+
+A = dbinom(x = 0:4, size = 10, prob = 0.70)
+sum(A)
+fewer_than_5
+
+B = dbinom(x = 0:10, size = 10, prob = 0.70)
+barplot(B, names.arg = "bar plot", xlab = "x", ylab = "B")
+barplot(height = B, width = x,
+        xlab = "X",
+        ylab = )
+
+
+x = 0:10
+sum(x*B)
+
+
+
+
+```
+```{r}
+no_more_than_7 = pbinom(q = 7,size = 10, prob = 0.70)
+p(X>5)
+1 - pbinom(5,10,0.70)
+pbinom(5,10,0.70, lower.tail = FALSE)
+P(X>=8)
+1 - pbinom(q = 7,size = 10, prob = 0.70)
+
+P(X<6)
+pbinom(q = 5, size = 10,prob = 0.70)
+
+P(X=9)
+dbinom(x = 9, size = 10, prob = 0.70)
+
+D = pbinom(q = 0:10, size = 10, prob = 0.70)
+y = 0:10
+E = paste("<=", y)
+E
+barplot(height = D,
+        names.arg = E,
+        ylab = "Probabilities", xlab = "X",
+        col = "red",
+        main = "X's Probabilities")
+```
